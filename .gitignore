@@ -1,0 +1,15 @@
+target/
+node_modules/
+web/dist/
+web/.mvn/
+.idea/
+*.iml
+.vscode/
+*.class
+*.log
+.DS_Store
+jcef-bundle/
+*.jar.original
+.tools/
+.mvn/wrapper/maven-wrapper.jar
+debug.log
