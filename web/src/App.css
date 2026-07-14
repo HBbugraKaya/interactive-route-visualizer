@@ -1,0 +1,208 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #e5e7eb;
+  background: #1a1d23;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.app-shell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(1200px 600px at 20% 0%, #252a33 0%, #16181d 55%, #12141a 100%);
+}
+
+.graph-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.tool-palette {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 10px;
+  background: rgba(20, 22, 28, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.tool-palette button {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #cbd5e1;
+  padding: 6px 10px;
+  border-radius: 7px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tool-palette button:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.tool-palette button.active {
+  background: #2563eb;
+  color: white;
+}
+
+.palette-sep {
+  width: 1px;
+  margin: 0 4px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hint-bar {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 10px;
+  z-index: 5;
+  font-size: 11px;
+  color: rgba(226, 232, 240, 0.55);
+  pointer-events: none;
+  text-align: center;
+}
+
+.node-circle {
+  fill: #1a1d23;
+  stroke: #38bdf8;
+  stroke-width: 3;
+}
+
+.node-halo {
+  fill: transparent;
+  stroke: transparent;
+}
+
+.route-node.selected .node-circle {
+  stroke: #60a5fa;
+  stroke-width: 4;
+}
+
+.route-node.selected .node-halo {
+  stroke: rgba(56, 189, 248, 0.35);
+  stroke-width: 8;
+}
+
+.route-node.connect-from .node-circle {
+  stroke: #f59e0b;
+}
+
+.node-label {
+  fill: #e2e8f0;
+  font-size: 12px;
+  font-weight: 600;
+  pointer-events: none;
+  user-select: none;
+}
+
+.node-meta {
+  fill: #94a3b8;
+  font-size: 10px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.node-handle {
+  fill: #fff;
+  stroke: #f59e0b;
+  stroke-width: 1.5;
+  opacity: 0.9;
+}
+
+.edge-line {
+  stroke: #f59e0b;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.edge-line.draft {
+  stroke-dasharray: 6 4;
+  opacity: 0.8;
+}
+
+.edge-hit {
+  stroke: transparent;
+  stroke-width: 14;
+}
+
+.route-edge.selected .edge-line {
+  stroke: #fbbf24;
+  stroke-width: 3.5;
+}
+
+.anno-pen {
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.anno-pen.selected {
+  filter: drop-shadow(0 0 3px #60a5fa);
+}
+
+.anno-arrow {
+  stroke-width: 2.5;
+}
+
+.anno-text {
+  fill: #1f2937;
+  font-size: 12px;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.anno-box.text .anno-text {
+  fill: #e5e7eb;
+}
+
+.anno-box.selected rect {
+  stroke-width: 2;
+}
+
+.weather-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  color: #e2e8f0;
+  font-size: 11px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.weather-glyph {
+  font-size: 12px;
+}
+
+.weather-temp {
+  font-weight: 700;
+}
