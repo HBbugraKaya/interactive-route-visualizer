@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "createdAt": "2026-07-14",
+    "updatedAt": "2026-07-14",
+    "currencies": ["EUR"]
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "x": 180,
+      "y": 160,
+      "label": "Istanbul",
+      "lat": 41.01,
+      "lon": 28.97,
+      "type": "hub",
+      "note": "Start",
+      "peopleCount": 2,
+      "stayDate": "2026-07-14",
+      "hotelNights": 2,
+      "pricePerNightEur": 120,
+      "usePeople": true,
+      "useStayDate": true,
+      "useHotelNights": true,
+      "usePrice": true
+    },
+    {
+      "id": "n2",
+      "x": 420,
+      "y": 220,
+      "label": "Ankara",
+      "lat": 39.93,
+      "lon": 32.86,
+      "type": "hub",
+      "note": "Transfer",
+      "peopleCount": 2,
+      "stayDate": "2026-07-16",
+      "hotelNights": 1,
+      "pricePerNightEur": 120,
+      "usePeople": true,
+      "useStayDate": true,
+      "useHotelNights": true,
+      "usePrice": true
+    },
+    {
+      "id": "n3",
+      "x": 680,
+      "y": 160,
+      "label": "Kayseri",
+      "lat": 38.73,
+      "lon": 35.48,
+      "type": "stop",
+      "note": "Arrival",
+      "peopleCount": 2,
+      "stayDate": "2026-07-17",
+      "hotelNights": 3,
+      "pricePerNightEur": 120,
+      "usePeople": true,
+      "useStayDate": true,
+      "useHotelNights": true,
+      "usePrice": true
+    }
+  ],
+  "edges": [
+    { "id": "e1", "from": "n1", "to": "n2" },
+    { "id": "e2", "from": "n2", "to": "n3" }
+  ],
+  "annotations": [
+    {
+      "id": "a1",
+      "type": "sticky",
+      "color": "#fde68a",
+      "x": 430,
+      "y": 300,
+      "text": "Aktarma 14:00"
+    }
+  ]
+}
